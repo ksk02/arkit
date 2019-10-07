@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  arkit_persistence
+//  arkit_slider
 //
-//  Created by 原啓祐 on 2019/07/27.
+//  Created by 原啓祐 on 2019/10/08.
 //  Copyright © 2019 ksk. All rights reserved.
 //
 
@@ -21,6 +21,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }()
 
     var sphereColor = UIColor.red
+    var sphereRadius = 0.5
 
 
     // シーンを保存する
@@ -65,6 +66,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         self.sphereColor = UIColor.red
     }
 
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        self.sphereRadius = Double(sender.value) * 100000
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -106,7 +111,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let sphereNode = SCNNode()
 
         // ノードにGeometryとTransformを設定
-        sphereNode.geometry = SCNSphere(radius: 0.05)
+        sphereNode.geometry = SCNSphere(radius: CGFloat(self.sphereRadius))
 
         let position = SCNVector3(x: 0, y: 0, z: -0.5) // ノードの位置は、左右：0m 上下：0m　奥に50cm
         if let camera = sceneView.pointOfView {
@@ -124,28 +129,4 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         guard !(anchor is ARPlaneAnchor) else { return }
     }
 
-    private func getWifiNumberOfActiveBars() -> Int? {
-        let app = UIApplication.shared
-        var numberOfActiveBars: Int?
-        guard let containerBar = app.value(forKey: "statusBar") as? UIView else { return nil }
-        guard let statusBarMorden = NSClassFromString("UIStatusBar_Modern"), containerBar .isKind(of: statusBarMorden), let statusBar = containerBar.value(forKey: "statusBar") as? UIView else { return nil }
-
-        guard let foregroundView = statusBar.value(forKey: "foregroundView") as? UIView else { return nil }
-
-        for view in foregroundView.subviews {
-            for v in view.subviews {
-                if let statusBarWifiSignalView = NSClassFromString("_UIStatusBarWifiSignalView"), v .isKind(of: statusBarWifiSignalView) {
-                    if let val = v.value(forKey: "numberOfActiveBars") as? Int {
-                        numberOfActiveBars = val
-                        break
-                    }
-                }
-            }
-            if let _ = numberOfActiveBars {
-                break
-            }
-        }
-
-        return numberOfActiveBars
-    }
 }
