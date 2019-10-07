@@ -84,19 +84,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
 
         // 球のノードを作成
-        let sphereNode = SCNNode()
+        var monstor = SCNNode()
+        let scene = SCNScene(named: "art.scnassets/test2.scn")!
+        monstor = scene.rootNode.childNode(withName: "Spider", recursively: true)!
+        monstor.scale = SCNVector3(0.0002, 0.0002, 0.0002)
 
-        // ノードにGeometryとTransformを設定
-        sphereNode.geometry = SCNSphere(radius: 0.05)
-
-        let position = SCNVector3(x: 0, y: 0, z: -0.5) // ノードの位置は、左右：0m 上下：0m　奥に50cm
+        let position = SCNVector3(x: 0, y: 0, z: -0.500) // ノードの位置は、左右：0m 上下：0m　奥に50cm
         if let camera = sceneView.pointOfView {
-            sphereNode.position = camera.convertPosition(position, to: nil) // カメラ位置からの偏差で求めた位置
+            monstor.position = camera.convertPosition(position, to: nil) // カメラ位置からの偏差で求めた位置
         }
 
-        let scene = SCNScene(named: "art.scnassets/test2.scn")
-        let rabbitNode = (scene?.rootNode.childNode(withName: "rabbit", recursively: false))!
-        sceneView.scene.rootNode.addChildNode(rabbitNode)
+        sceneView.scene.rootNode.addChildNode(monstor)
     }
 
     // 平面を検出したときに呼ばれる
