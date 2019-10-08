@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  arkit_traffic
 //
-//  Created by 原啓祐 on 2019/09/23.
+//  Created by 原啓祐 on 2019/10/08.
 //  Copyright © 2019 ksk. All rights reserved.
 //
 

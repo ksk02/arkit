@@ -34,14 +34,6 @@
                                     <action selector="loadButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="oCg-af-VBa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81i-HD-1SP">
-                                <rect key="frame" x="161" y="728" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="緑色に変える"/>
-                                <connections>
-                                    <action selector="changeColorButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="qjZ-6x-3LO"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>

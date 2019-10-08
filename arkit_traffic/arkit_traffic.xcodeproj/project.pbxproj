@@ -7,66 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		604E1B282338E22E0054CE1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604E1B272338E22E0054CE1C /* AppDelegate.swift */; };
-		604E1B2A2338E22E0054CE1C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 604E1B292338E22E0054CE1C /* art.scnassets */; };
-		604E1B2C2338E22E0054CE1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604E1B2B2338E22E0054CE1C /* ViewController.swift */; };
-		604E1B2F2338E22E0054CE1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604E1B2D2338E22E0054CE1C /* Main.storyboard */; };
-		604E1B312338E2300054CE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604E1B302338E2300054CE1C /* Assets.xcassets */; };
-		604E1B342338E2300054CE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604E1B322338E2300054CE1C /* LaunchScreen.storyboard */; };
-		604E1B3F2338E2310054CE1C /* arkit_trafficTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604E1B3E2338E2310054CE1C /* arkit_trafficTests.swift */; };
-		604E1B4A2338E2310054CE1C /* arkit_trafficUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604E1B492338E2310054CE1C /* arkit_trafficUITests.swift */; };
+		603329DA234C08700013C9E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603329D9234C08700013C9E3 /* AppDelegate.swift */; };
+		603329DC234C08700013C9E3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 603329DB234C08700013C9E3 /* art.scnassets */; };
+		603329DE234C08700013C9E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603329DD234C08700013C9E3 /* ViewController.swift */; };
+		603329E1234C08700013C9E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603329DF234C08700013C9E3 /* Main.storyboard */; };
+		603329E3234C08720013C9E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 603329E2234C08720013C9E3 /* Assets.xcassets */; };
+		603329E6234C08720013C9E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603329E4234C08720013C9E3 /* LaunchScreen.storyboard */; };
+		603329F1234C08720013C9E3 /* arkit_trafficTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603329F0234C08720013C9E3 /* arkit_trafficTests.swift */; };
+		603329FC234C08730013C9E3 /* arkit_trafficUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603329FB234C08730013C9E3 /* arkit_trafficUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		604E1B3B2338E2310054CE1C /* PBXContainerItemProxy */ = {
+		603329ED234C08720013C9E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 604E1B1C2338E22E0054CE1C /* Project object */;
+			containerPortal = 603329CE234C08700013C9E3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 604E1B232338E22E0054CE1C;
+			remoteGlobalIDString = 603329D5234C08700013C9E3;
 			remoteInfo = arkit_traffic;
 		};
-		604E1B462338E2310054CE1C /* PBXContainerItemProxy */ = {
+		603329F8234C08730013C9E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 604E1B1C2338E22E0054CE1C /* Project object */;
+			containerPortal = 603329CE234C08700013C9E3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 604E1B232338E22E0054CE1C;
+			remoteGlobalIDString = 603329D5234C08700013C9E3;
 			remoteInfo = arkit_traffic;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		604E1B242338E22E0054CE1C /* arkit_traffic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arkit_traffic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		604E1B272338E22E0054CE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		604E1B292338E22E0054CE1C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		604E1B2B2338E22E0054CE1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		604E1B2E2338E22E0054CE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		604E1B302338E2300054CE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		604E1B332338E2300054CE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		604E1B352338E2310054CE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		604E1B3A2338E2310054CE1C /* arkit_trafficTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = arkit_trafficTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		604E1B3E2338E2310054CE1C /* arkit_trafficTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arkit_trafficTests.swift; sourceTree = "<group>"; };
-		604E1B402338E2310054CE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		604E1B452338E2310054CE1C /* arkit_trafficUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = arkit_trafficUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		604E1B492338E2310054CE1C /* arkit_trafficUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arkit_trafficUITests.swift; sourceTree = "<group>"; };
-		604E1B4B2338E2310054CE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		603329D6234C08700013C9E3 /* arkit_traffic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arkit_traffic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		603329D9234C08700013C9E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		603329DB234C08700013C9E3 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		603329DD234C08700013C9E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		603329E0234C08700013C9E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		603329E2234C08720013C9E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		603329E5234C08720013C9E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		603329E7234C08720013C9E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		603329EC234C08720013C9E3 /* arkit_trafficTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = arkit_trafficTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		603329F0234C08720013C9E3 /* arkit_trafficTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arkit_trafficTests.swift; sourceTree = "<group>"; };
+		603329F2234C08720013C9E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		603329F7234C08730013C9E3 /* arkit_trafficUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = arkit_trafficUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		603329FB234C08730013C9E3 /* arkit_trafficUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arkit_trafficUITests.swift; sourceTree = "<group>"; };
+		603329FD234C08730013C9E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		604E1B212338E22E0054CE1C /* Frameworks */ = {
+		603329D3234C08700013C9E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		604E1B372338E2310054CE1C /* Frameworks */ = {
+		603329E9234C08720013C9E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		604E1B422338E2310054CE1C /* Frameworks */ = {
+		603329F4234C08730013C9E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,54 +76,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		604E1B1B2338E22E0054CE1C = {
+		603329CD234C08700013C9E3 = {
 			isa = PBXGroup;
 			children = (
-				604E1B262338E22E0054CE1C /* arkit_traffic */,
-				604E1B3D2338E2310054CE1C /* arkit_trafficTests */,
-				604E1B482338E2310054CE1C /* arkit_trafficUITests */,
-				604E1B252338E22E0054CE1C /* Products */,
+				603329D8234C08700013C9E3 /* arkit_traffic */,
+				603329EF234C08720013C9E3 /* arkit_trafficTests */,
+				603329FA234C08730013C9E3 /* arkit_trafficUITests */,
+				603329D7234C08700013C9E3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		604E1B252338E22E0054CE1C /* Products */ = {
+		603329D7234C08700013C9E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				604E1B242338E22E0054CE1C /* arkit_traffic.app */,
-				604E1B3A2338E2310054CE1C /* arkit_trafficTests.xctest */,
-				604E1B452338E2310054CE1C /* arkit_trafficUITests.xctest */,
+				603329D6234C08700013C9E3 /* arkit_traffic.app */,
+				603329EC234C08720013C9E3 /* arkit_trafficTests.xctest */,
+				603329F7234C08730013C9E3 /* arkit_trafficUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		604E1B262338E22E0054CE1C /* arkit_traffic */ = {
+		603329D8234C08700013C9E3 /* arkit_traffic */ = {
 			isa = PBXGroup;
 			children = (
-				604E1B272338E22E0054CE1C /* AppDelegate.swift */,
-				604E1B292338E22E0054CE1C /* art.scnassets */,
-				604E1B2B2338E22E0054CE1C /* ViewController.swift */,
-				604E1B2D2338E22E0054CE1C /* Main.storyboard */,
-				604E1B302338E2300054CE1C /* Assets.xcassets */,
-				604E1B322338E2300054CE1C /* LaunchScreen.storyboard */,
-				604E1B352338E2310054CE1C /* Info.plist */,
+				603329D9234C08700013C9E3 /* AppDelegate.swift */,
+				603329DB234C08700013C9E3 /* art.scnassets */,
+				603329DD234C08700013C9E3 /* ViewController.swift */,
+				603329DF234C08700013C9E3 /* Main.storyboard */,
+				603329E2234C08720013C9E3 /* Assets.xcassets */,
+				603329E4234C08720013C9E3 /* LaunchScreen.storyboard */,
+				603329E7234C08720013C9E3 /* Info.plist */,
 			);
 			path = arkit_traffic;
 			sourceTree = "<group>";
 		};
-		604E1B3D2338E2310054CE1C /* arkit_trafficTests */ = {
+		603329EF234C08720013C9E3 /* arkit_trafficTests */ = {
 			isa = PBXGroup;
 			children = (
-				604E1B3E2338E2310054CE1C /* arkit_trafficTests.swift */,
-				604E1B402338E2310054CE1C /* Info.plist */,
+				603329F0234C08720013C9E3 /* arkit_trafficTests.swift */,
+				603329F2234C08720013C9E3 /* Info.plist */,
 			);
 			path = arkit_trafficTests;
 			sourceTree = "<group>";
 		};
-		604E1B482338E2310054CE1C /* arkit_trafficUITests */ = {
+		603329FA234C08730013C9E3 /* arkit_trafficUITests */ = {
 			isa = PBXGroup;
 			children = (
-				604E1B492338E2310054CE1C /* arkit_trafficUITests.swift */,
-				604E1B4B2338E2310054CE1C /* Info.plist */,
+				603329FB234C08730013C9E3 /* arkit_trafficUITests.swift */,
+				603329FD234C08730013C9E3 /* Info.plist */,
 			);
 			path = arkit_trafficUITests;
 			sourceTree = "<group>";
@@ -131,13 +131,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		604E1B232338E22E0054CE1C /* arkit_traffic */ = {
+		603329D5234C08700013C9E3 /* arkit_traffic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 604E1B4E2338E2310054CE1C /* Build configuration list for PBXNativeTarget "arkit_traffic" */;
+			buildConfigurationList = 60332A00234C08730013C9E3 /* Build configuration list for PBXNativeTarget "arkit_traffic" */;
 			buildPhases = (
-				604E1B202338E22E0054CE1C /* Sources */,
-				604E1B212338E22E0054CE1C /* Frameworks */,
-				604E1B222338E22E0054CE1C /* Resources */,
+				603329D2234C08700013C9E3 /* Sources */,
+				603329D3234C08700013C9E3 /* Frameworks */,
+				603329D4234C08700013C9E3 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -145,69 +145,69 @@
 			);
 			name = arkit_traffic;
 			productName = arkit_traffic;
-			productReference = 604E1B242338E22E0054CE1C /* arkit_traffic.app */;
+			productReference = 603329D6234C08700013C9E3 /* arkit_traffic.app */;
 			productType = "com.apple.product-type.application";
 		};
-		604E1B392338E2310054CE1C /* arkit_trafficTests */ = {
+		603329EB234C08720013C9E3 /* arkit_trafficTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 604E1B512338E2310054CE1C /* Build configuration list for PBXNativeTarget "arkit_trafficTests" */;
+			buildConfigurationList = 60332A03234C08730013C9E3 /* Build configuration list for PBXNativeTarget "arkit_trafficTests" */;
 			buildPhases = (
-				604E1B362338E2310054CE1C /* Sources */,
-				604E1B372338E2310054CE1C /* Frameworks */,
-				604E1B382338E2310054CE1C /* Resources */,
+				603329E8234C08720013C9E3 /* Sources */,
+				603329E9234C08720013C9E3 /* Frameworks */,
+				603329EA234C08720013C9E3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				604E1B3C2338E2310054CE1C /* PBXTargetDependency */,
+				603329EE234C08720013C9E3 /* PBXTargetDependency */,
 			);
 			name = arkit_trafficTests;
 			productName = arkit_trafficTests;
-			productReference = 604E1B3A2338E2310054CE1C /* arkit_trafficTests.xctest */;
+			productReference = 603329EC234C08720013C9E3 /* arkit_trafficTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		604E1B442338E2310054CE1C /* arkit_trafficUITests */ = {
+		603329F6234C08730013C9E3 /* arkit_trafficUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 604E1B542338E2310054CE1C /* Build configuration list for PBXNativeTarget "arkit_trafficUITests" */;
+			buildConfigurationList = 60332A06234C08730013C9E3 /* Build configuration list for PBXNativeTarget "arkit_trafficUITests" */;
 			buildPhases = (
-				604E1B412338E2310054CE1C /* Sources */,
-				604E1B422338E2310054CE1C /* Frameworks */,
-				604E1B432338E2310054CE1C /* Resources */,
+				603329F3234C08730013C9E3 /* Sources */,
+				603329F4234C08730013C9E3 /* Frameworks */,
+				603329F5234C08730013C9E3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				604E1B472338E2310054CE1C /* PBXTargetDependency */,
+				603329F9234C08730013C9E3 /* PBXTargetDependency */,
 			);
 			name = arkit_trafficUITests;
 			productName = arkit_trafficUITests;
-			productReference = 604E1B452338E2310054CE1C /* arkit_trafficUITests.xctest */;
+			productReference = 603329F7234C08730013C9E3 /* arkit_trafficUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		604E1B1C2338E22E0054CE1C /* Project object */ = {
+		603329CE234C08700013C9E3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = ksk;
 				TargetAttributes = {
-					604E1B232338E22E0054CE1C = {
+					603329D5234C08700013C9E3 = {
 						CreatedOnToolsVersion = 11.0;
 					};
-					604E1B392338E2310054CE1C = {
+					603329EB234C08720013C9E3 = {
 						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 604E1B232338E22E0054CE1C;
+						TestTargetID = 603329D5234C08700013C9E3;
 					};
-					604E1B442338E2310054CE1C = {
+					603329F6234C08730013C9E3 = {
 						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 604E1B232338E22E0054CE1C;
+						TestTargetID = 603329D5234C08700013C9E3;
 					};
 				};
 			};
-			buildConfigurationList = 604E1B1F2338E22E0054CE1C /* Build configuration list for PBXProject "arkit_traffic" */;
+			buildConfigurationList = 603329D1234C08700013C9E3 /* Build configuration list for PBXProject "arkit_traffic" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -215,38 +215,38 @@
 				en,
 				Base,
 			);
-			mainGroup = 604E1B1B2338E22E0054CE1C;
-			productRefGroup = 604E1B252338E22E0054CE1C /* Products */;
+			mainGroup = 603329CD234C08700013C9E3;
+			productRefGroup = 603329D7234C08700013C9E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				604E1B232338E22E0054CE1C /* arkit_traffic */,
-				604E1B392338E2310054CE1C /* arkit_trafficTests */,
-				604E1B442338E2310054CE1C /* arkit_trafficUITests */,
+				603329D5234C08700013C9E3 /* arkit_traffic */,
+				603329EB234C08720013C9E3 /* arkit_trafficTests */,
+				603329F6234C08730013C9E3 /* arkit_trafficUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		604E1B222338E22E0054CE1C /* Resources */ = {
+		603329D4234C08700013C9E3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604E1B2A2338E22E0054CE1C /* art.scnassets in Resources */,
-				604E1B342338E2300054CE1C /* LaunchScreen.storyboard in Resources */,
-				604E1B312338E2300054CE1C /* Assets.xcassets in Resources */,
-				604E1B2F2338E22E0054CE1C /* Main.storyboard in Resources */,
+				603329DC234C08700013C9E3 /* art.scnassets in Resources */,
+				603329E6234C08720013C9E3 /* LaunchScreen.storyboard in Resources */,
+				603329E3234C08720013C9E3 /* Assets.xcassets in Resources */,
+				603329E1234C08700013C9E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		604E1B382338E2310054CE1C /* Resources */ = {
+		603329EA234C08720013C9E3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		604E1B432338E2310054CE1C /* Resources */ = {
+		603329F5234C08730013C9E3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,59 +256,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		604E1B202338E22E0054CE1C /* Sources */ = {
+		603329D2234C08700013C9E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604E1B2C2338E22E0054CE1C /* ViewController.swift in Sources */,
-				604E1B282338E22E0054CE1C /* AppDelegate.swift in Sources */,
+				603329DE234C08700013C9E3 /* ViewController.swift in Sources */,
+				603329DA234C08700013C9E3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		604E1B362338E2310054CE1C /* Sources */ = {
+		603329E8234C08720013C9E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604E1B3F2338E2310054CE1C /* arkit_trafficTests.swift in Sources */,
+				603329F1234C08720013C9E3 /* arkit_trafficTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		604E1B412338E2310054CE1C /* Sources */ = {
+		603329F3234C08730013C9E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604E1B4A2338E2310054CE1C /* arkit_trafficUITests.swift in Sources */,
+				603329FC234C08730013C9E3 /* arkit_trafficUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		604E1B3C2338E2310054CE1C /* PBXTargetDependency */ = {
+		603329EE234C08720013C9E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 604E1B232338E22E0054CE1C /* arkit_traffic */;
-			targetProxy = 604E1B3B2338E2310054CE1C /* PBXContainerItemProxy */;
+			target = 603329D5234C08700013C9E3 /* arkit_traffic */;
+			targetProxy = 603329ED234C08720013C9E3 /* PBXContainerItemProxy */;
 		};
-		604E1B472338E2310054CE1C /* PBXTargetDependency */ = {
+		603329F9234C08730013C9E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 604E1B232338E22E0054CE1C /* arkit_traffic */;
-			targetProxy = 604E1B462338E2310054CE1C /* PBXContainerItemProxy */;
+			target = 603329D5234C08700013C9E3 /* arkit_traffic */;
+			targetProxy = 603329F8234C08730013C9E3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		604E1B2D2338E22E0054CE1C /* Main.storyboard */ = {
+		603329DF234C08700013C9E3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				604E1B2E2338E22E0054CE1C /* Base */,
+				603329E0234C08700013C9E3 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		604E1B322338E2300054CE1C /* LaunchScreen.storyboard */ = {
+		603329E4234C08720013C9E3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				604E1B332338E2300054CE1C /* Base */,
+				603329E5234C08720013C9E3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		604E1B4C2338E2310054CE1C /* Debug */ = {
+		603329FE234C08730013C9E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -376,7 +376,7 @@
 			};
 			name = Debug;
 		};
-		604E1B4D2338E2310054CE1C /* Release */ = {
+		603329FF234C08730013C9E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -430,7 +430,7 @@
 			};
 			name = Release;
 		};
-		604E1B4F2338E2310054CE1C /* Debug */ = {
+		60332A01234C08730013C9E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -448,7 +448,7 @@
 			};
 			name = Debug;
 		};
-		604E1B502338E2310054CE1C /* Release */ = {
+		60332A02234C08730013C9E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -466,7 +466,7 @@
 			};
 			name = Release;
 		};
-		604E1B522338E2310054CE1C /* Debug */ = {
+		60332A04234C08730013C9E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -488,7 +488,7 @@
 			};
 			name = Debug;
 		};
-		604E1B532338E2310054CE1C /* Release */ = {
+		60332A05234C08730013C9E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -510,7 +510,7 @@
 			};
 			name = Release;
 		};
-		604E1B552338E2310054CE1C /* Debug */ = {
+		60332A07234C08730013C9E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -530,7 +530,7 @@
 			};
 			name = Debug;
 		};
-		604E1B562338E2310054CE1C /* Release */ = {
+		60332A08234C08730013C9E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -553,43 +553,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		604E1B1F2338E22E0054CE1C /* Build configuration list for PBXProject "arkit_traffic" */ = {
+		603329D1234C08700013C9E3 /* Build configuration list for PBXProject "arkit_traffic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				604E1B4C2338E2310054CE1C /* Debug */,
-				604E1B4D2338E2310054CE1C /* Release */,
+				603329FE234C08730013C9E3 /* Debug */,
+				603329FF234C08730013C9E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		604E1B4E2338E2310054CE1C /* Build configuration list for PBXNativeTarget "arkit_traffic" */ = {
+		60332A00234C08730013C9E3 /* Build configuration list for PBXNativeTarget "arkit_traffic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				604E1B4F2338E2310054CE1C /* Debug */,
-				604E1B502338E2310054CE1C /* Release */,
+				60332A01234C08730013C9E3 /* Debug */,
+				60332A02234C08730013C9E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		604E1B512338E2310054CE1C /* Build configuration list for PBXNativeTarget "arkit_trafficTests" */ = {
+		60332A03234C08730013C9E3 /* Build configuration list for PBXNativeTarget "arkit_trafficTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				604E1B522338E2310054CE1C /* Debug */,
-				604E1B532338E2310054CE1C /* Release */,
+				60332A04234C08730013C9E3 /* Debug */,
+				60332A05234C08730013C9E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		604E1B542338E2310054CE1C /* Build configuration list for PBXNativeTarget "arkit_trafficUITests" */ = {
+		60332A06234C08730013C9E3 /* Build configuration list for PBXNativeTarget "arkit_trafficUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				604E1B552338E2310054CE1C /* Debug */,
-				604E1B562338E2310054CE1C /* Release */,
+				60332A07234C08730013C9E3 /* Debug */,
+				60332A08234C08730013C9E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 604E1B1C2338E22E0054CE1C /* Project object */;
+	rootObject = 603329CE234C08700013C9E3 /* Project object */;
 }
