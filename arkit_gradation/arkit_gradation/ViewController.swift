@@ -12,6 +12,7 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
+    private let device = MTLCreateSystemDefaultDevice()!
     var worldMapURL: URL = {
         do {
             return try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("worldMapURL")
@@ -20,9 +21,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }()
 
-    let topColor = UIColor(red:0.07, green:0.13, blue:0.26, alpha:1)
-    let bottomColor = UIColor(red:0.54, green:0.74, blue:0.74, alpha:1)
-    var sphereColor = 
+    // let topColor = UIColor(red:0.07, green:0.13, blue:0.26, alpha:1)
+    // let bottomColor = UIColor(red:0.54, green:0.74, blue:0.74, alpha:1)
+    // var sphereColor = 
 
 
 
@@ -74,43 +75,66 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
 
     // 画面をタップしたときに呼ばれる
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    // override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
-        // 最初にタップした座標を取り出す
-        guard let touch = touches.first else {return}
+    //     // 最初にタップした座標を取り出す
+    //     guard let touch = touches.first else {return}
 
-        let touchPos = touch.location(in: sceneView)
+    //     let touchPos = touch.location(in: sceneView)
 
-        // タップされた位置のARアンカーを探す
-        let hitTest = sceneView.hitTest(touchPos, types: .existingPlaneUsingExtent)
-        if !hitTest.isEmpty {
-            // タップした箇所が取得できていればアンカーを追加
-            let anchor = ARAnchor(transform: hitTest.first!.worldTransform)
-            sceneView.session.add(anchor: anchor)
-        }
+    //     // タップされた位置のARアンカーを探す
+    //     let hitTest = sceneView.hitTest(touchPos, types: .existingPlaneUsingExtent)
+    //     if !hitTest.isEmpty {
+    //         // タップした箇所が取得できていればアンカーを追加
+    //         let anchor = ARAnchor(transform: hitTest.first!.worldTransform)
+    //         sceneView.session.add(anchor: anchor)
+    //     }
 
-        // 球のノードを作成
-        let sphereNode = SCNNode()
+    //     // 球のノードを作成
+    //     let sphereNode = SCNNode()
 
-        // ノードにGeometryとTransformを設定
-        sphereNode.geometry = SCNSphere(radius: 0.05)
+    //     // ノードにGeometryとTransformを設定
+    //     sphereNode.geometry = SCNSphere(radius: 0.05)
 
-        let position = SCNVector3(x: 0, y: 0, z: -0.5) // ノードの位置は、左右：0m 上下：0m　奥に50cm
-        if let camera = sceneView.pointOfView {
-            sphereNode.position = camera.convertPosition(position, to: nil) // カメラ位置からの偏差で求めた位置
-        }
+    //     let position = SCNVector3(x: 0, y: 0, z: -0.5) // ノードの位置は、左右：0m 上下：0m　奥に50cm
+    //     if let camera = sceneView.pointOfView {
+    //         sphereNode.position = camera.convertPosition(position, to: nil) // カメラ位置からの偏差で求めた位置
+    //     }
 
-        var trafficStrength = 0;
+    //     var trafficStrength = 0;
 
-        // 球の色を設定
-        sphereNode.geometry!.materials.first?.diffuse.contents = self.sphereColor”
+    //     // 球の色を設定
+    //     sphereNode.geometry!.materials.first?.diffuse.contents = self.sphereColor”
 
-        sceneView.scene.rootNode.addChildNode(sphereNode)
-    }
+    //     sceneView.scene.rootNode.addChildNode(sphereNode)
+    // }
 
     // 平面を検出したときに呼ばれる
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        guard !(anchor is ARPlaneAnchor) else { return }
+        // guard !(anchor is ARPlaneAnchor) else { return }
+        guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
+
+        // 平面ジオメトリの検出
+        let planeGeometry = ARSCNPlaneGeometry(device: device)!
+        planeGeometry.update(from: planeAnchor.geometry)
+        // α値 透明度の設定
+        planeGeometry.materials.first?.diffuse.contents = UIColor.red.withAlphaComponent(0.7)
+
+        // 平面ノードの作成
+        let planeNode = SCNNode()
+        planeNode.geometry = planeGeometry
+
+        // ノードの追加
+        node.addChildNode(planeNode)
+
+        // 平面の形状が更新されたときに呼ばれる
+        func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+            guard let planeAnchor = anchor as? ARPlaneAnchor else {return}
+            guard let planeGeometry = node.childNodes.first!.geometry as? ARSCNPlaneGeometry else {return}
+
+            // 平面の形状をアップデート
+            planeGeometry.update(from: planeAnchor.geometry)
+        }
     }
 
 

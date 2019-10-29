@@ -85,9 +85,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         // 植物のノードを作成
         var plantNode = SCNNode()
-        let scene = SCNScene(named: "art.scnassets/plant.scn")!
-        plantNode = scene.rootNode.childNode(withName: "Plant", recursively: true)!
-        plantNode.scale = SCNVector3(0.02, 0.02, 0.02)
+        let scene = SCNScene(named: "art.scnassets/plant2.scn")!
+        plantNode = scene.rootNode.childNode(withName: "Plant2", recursively: true)!
+        plantNode.scale = SCNVector3(1.0, 1.0, 1.0)
 
         let position = SCNVector3(x: 0, y: 0, z: -0.500) // ノードの位置は、左右：0m 上下：0m　奥に50cm
         if let camera = sceneView.pointOfView {

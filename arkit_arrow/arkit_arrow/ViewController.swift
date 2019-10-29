@@ -85,16 +85,24 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         // 矢印のノードを作成
         var arrowNode = SCNNode()
-        let scene = SCNScene(named: "art.scnassets/arrow3.scn")!
+        var material = SCNMaterial()
+        var material2 = SCNMaterial()
+        let scene = SCNScene(named: "art.scnassets/arrow.scn")!
 
-        // 複数のパーツで構成されているので、すべてaddChildNodeする必要がある
+        // 複数のパーツで構成されているので、すべてaddChildNodeする
         scene.rootNode.childNodes.map { arrowNode.addChildNode($0) }
-        arrowNode.scale = SCNVector3(0.0002, 0.0002, 0.0002)
+        // 大きさ調節する
+        arrowNode.scale = SCNVector3(0.0005, 0.0005, 0.0005)
+
+        material.diffuse.contents = UIColor.green
+        arrowNode.geometry?.materials = [material]
 
         let position = SCNVector3(x: 0, y: 0, z: -0.500) // ノードの位置は、左右：0m 上下：0m　奥に50cm
         if let camera = sceneView.pointOfView {
             arrowNode.position = camera.convertPosition(position, to: nil) // カメラ位置からの偏差で求めた位置
-            arrowNode.eulerAngles = camera.eulerAngles
+            arrowNode.eulerAngles.x = camera.eulerAngles.x + .pi / 2
+            arrowNode.eulerAngles.y = camera.eulerAngles.y - .pi / 6
+            arrowNode.eulerAngles.z = camera.eulerAngles.z
         }
 
         sceneView.scene.rootNode.addChildNode(arrowNode)
