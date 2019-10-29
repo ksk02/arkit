@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  arkit_savepoint
+//  arkit_arrow
 //
-//  Created by 原啓祐 on 2019/10/07.
+//  Created by 原啓祐 on 2019/10/29.
 //  Copyright © 2019 ksk. All rights reserved.
 //
 
@@ -83,19 +83,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             sceneView.session.add(anchor: anchor)
         }
 
-        // 植物のノードを作成
-        var plantNode = SCNNode()
-        let scene = SCNScene(named: "art.scnassets/plant.scn")!
-        plantNode = scene.rootNode.childNode(withName: "Plant", recursively: true)!
-        plantNode.scale = SCNVector3(0.02, 0.02, 0.02)
+        // 矢印のノードを作成
+        var arrowNode = SCNNode()
+        let scene = SCNScene(named: "art.scnassets/arrow3.scn")!
+
+        // 複数のパーツで構成されているので、すべてaddChildNodeする必要がある
+        scene.rootNode.childNodes.map { arrowNode.addChildNode($0) }
+        arrowNode.scale = SCNVector3(0.0002, 0.0002, 0.0002)
 
         let position = SCNVector3(x: 0, y: 0, z: -0.500) // ノードの位置は、左右：0m 上下：0m　奥に50cm
         if let camera = sceneView.pointOfView {
-            plantNode.position = camera.convertPosition(position, to: nil) // カメラ位置からの偏差で求めた位置
-            plantNode.eulerAngles = camera.eulerAngles
+            arrowNode.position = camera.convertPosition(position, to: nil) // カメラ位置からの偏差で求めた位置
+            arrowNode.eulerAngles = camera.eulerAngles
         }
 
-        sceneView.scene.rootNode.addChildNode(plantNode)
+        sceneView.scene.rootNode.addChildNode(arrowNode)
     }
 
     // 平面を検出したときに呼ばれる
