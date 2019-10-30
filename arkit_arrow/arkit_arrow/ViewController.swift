@@ -87,15 +87,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         var arrowNode = SCNNode()
         var material = SCNMaterial()
         var material2 = SCNMaterial()
-        let scene = SCNScene(named: "art.scnassets/arrow.scn")!
+        let scene = SCNScene(named: "art.scnassets/arrow3.scn")!
 
         // 複数のパーツで構成されているので、すべてaddChildNodeする
-        scene.rootNode.childNodes.map { arrowNode.addChildNode($0) }
+        // scene.rootNode.childNodes.map { arrowNode.addChildNode($0) }
+        arrowNode = scene.rootNode.childNode(withName: "Arrow3", recursively: true)!
         // 大きさ調節する
-        arrowNode.scale = SCNVector3(0.0005, 0.0005, 0.0005)
+        arrowNode.scale = SCNVector3(0.05, 0.05, 0.05)
 
         material.diffuse.contents = UIColor.green
-        arrowNode.geometry?.materials = [material]
+//        arrowNode.geometry?.materials = [material]
 
         let position = SCNVector3(x: 0, y: 0, z: -0.500) // ノードの位置は、左右：0m 上下：0m　奥に50cm
         if let camera = sceneView.pointOfView {
