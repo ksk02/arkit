@@ -87,7 +87,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         var plantNode = SCNNode()
         let scene = SCNScene(named: "art.scnassets/map_marker.scn")!
         plantNode = scene.rootNode.childNode(withName: "MapMarker", recursively: true)!
-        plantNode.scale = SCNVector3(0.1, 0.1, 0.1)
+        plantNode.scale = SCNVector3(1.5, 1.5, 1.5)
 
         let position = SCNVector3(x: 0, y: 0, z: -0.500) // ノードの位置は、左右：0m 上下：0m　奥に50cm
         if let camera = sceneView.pointOfView {

@@ -118,7 +118,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let planeGeometry = ARSCNPlaneGeometry(device: device)!
         planeGeometry.update(from: planeAnchor.geometry)
         // α値 透明度の設定
-        planeGeometry.materials.first?.diffuse.contents = UIColor.red.withAlphaComponent(0.7)
+        planeGeometry.materials.first?.diffuse.contents = UIColor.red
 
         // 平面ノードの作成
         let planeNode = SCNNode()
