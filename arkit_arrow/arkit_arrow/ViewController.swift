@@ -20,6 +20,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }()
 
+    var worldScene = SCNScene(named: "art.scnassets/arrow4_red.scn")!
+    var identifyName = "ArrowRed"
+
+    // 緑色の矢印を読み込む
+    @IBAction func changeGreenColorPressed(_ sender: Any) {
+        self.worldScene = SCNScene(named: "art.scnassets/arrow4_green.scn")!
+        self.identifyName = "ArrowGreen"
+    }
+
     // シーンを保存する
     @IBAction func saveButtonPressed(_ sender: Any) {
         sceneView.session.getCurrentWorldMap { worldMap, error in guard let map = worldMap else { return }
@@ -87,11 +96,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         var arrowNode = SCNNode()
         // var material = SCNMaterial()
         // var material2 = SCNMaterial()
-        let scene = SCNScene(named: "art.scnassets/arrow4.scn")!
+        // let scene = SCNScene(named: "art.scnassets/arrow4.scn")!
+        var scene = self.worldScene
 
         // 複数のパーツで構成されているので、すべてaddChildNodeする
         // scene.rootNode.childNodes.map { arrowNode.addChildNode($0) }
-        arrowNode = scene.rootNode.childNode(withName: "Arrow4", recursively: true)!
+        arrowNode = scene.rootNode.childNode(withName: self.identifyName, recursively: true)!
         // 大きさ調節する
         arrowNode.scale = SCNVector3(2.5, 2.5, 2.5)
 
