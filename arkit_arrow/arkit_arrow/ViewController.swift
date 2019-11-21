@@ -20,13 +20,30 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }()
 
-    var worldScene = SCNScene(named: "art.scnassets/arrow4_red.scn")!
+    var worldSceneName = "art.scnassets/arrow4_red.scn"
+    // var worldScene = SCNScene(named: "art.scnassets/arrow4_red.scn")!
     var identifyName = "ArrowRed"
 
     // 緑色の矢印を読み込む
     @IBAction func changeGreenColorPressed(_ sender: Any) {
-        self.worldScene = SCNScene(named: "art.scnassets/arrow4_green.scn")!
+        self.worldSceneName = "art.scnassets/arrow4_green.scn"
+        // self.worldScene = SCNScene(named: "art.scnassets/arrow4_green.scn")!
         self.identifyName = "ArrowGreen"
+    }
+
+    @IBAction func changeBlueColorPressed(_ sender: Any) {
+        self.worldSceneName = "art.scnassets/arrow4_blue.scn"
+        self.identifyName = "ArrowBlue"
+    }
+
+    @IBAction func changeYellowColorPressed(_ sender: Any) {
+        self.worldSceneName = "art.scnassets/arrow4_yellow.scn"
+        self.identifyName = "ArrowYellow"
+    }
+
+    @IBAction func changeRedColorPressed(_ sender: Any) {
+        self.worldSceneName = "art.scnassets/arrow4_red.scn"
+        self.identifyName = "ArrowRed"
     }
 
     // シーンを保存する
@@ -96,12 +113,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         var arrowNode = SCNNode()
         // var material = SCNMaterial()
         // var material2 = SCNMaterial()
-        // let scene = SCNScene(named: "art.scnassets/arrow4.scn")!
-        var scene = self.worldScene
+        let scene = SCNScene(named: self.worldSceneName)!
+        // let scene = self.worldScene
+print("こんにちはーーーーーーーーーーーーーー")
+print(scene)
 
         // 複数のパーツで構成されているので、すべてaddChildNodeする
-        // scene.rootNode.childNodes.map { arrowNode.addChildNode($0) }
-        arrowNode = scene.rootNode.childNode(withName: self.identifyName, recursively: true)!
+        scene.rootNode.childNodes.map { arrowNode.addChildNode($0) }
+        // arrowNode = scene.rootNode.childNode(withName: self.identifyName, recursively: true)!
         // 大きさ調節する
         arrowNode.scale = SCNVector3(2.5, 2.5, 2.5)
 
@@ -121,6 +140,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
 
     // 平面を検出したときに呼ばれる
+    // renderer(_: didAdd) が平面が検出された時に呼び出されるデリゲートメソッド
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard !(anchor is ARPlaneAnchor) else { return }
     }
