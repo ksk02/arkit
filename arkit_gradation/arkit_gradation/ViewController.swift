@@ -20,12 +20,31 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             fatalError("No such file")
         }
     }()
-
-    // let topColor = UIColor(red:0.07, green:0.13, blue:0.26, alpha:1)
-    // let bottomColor = UIColor(red:0.54, green:0.74, blue:0.74, alpha:1)
-    // var sphereColor = 
-
-
+    
+    var sphereColor = UIColor.red
+    var ringRadius = 1.0
+    
+    @IBAction func changeGreenButtonPressed(_ sender: Any) {
+        self.sphereColor = UIColor.green
+    }
+    
+    @IBAction func changeBlueButtonPressed(_ sender: Any) {
+        self.sphereColor = UIColor.blue
+    }
+    
+    @IBAction func changeYellowButtonPressed(_ sender: Any) {
+        self.sphereColor = UIColor.yellow
+    }
+    
+    @IBAction func changeRedButtonPressed(_ sender: Any) {
+        self.sphereColor = UIColor.red
+    }
+    
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        sender.maximumValue = 100.0
+        sender.minimumValue = 0.1
+        self.ringRadius = Double(sender.value)
+    }
 
     // シーンを保存する
     @IBAction func saveButtonPressed(_ sender: Any) {
@@ -75,39 +94,31 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
 
     // 画面をタップしたときに呼ばれる
-    // override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
-    //     // 最初にタップした座標を取り出す
-    //     guard let touch = touches.first else {return}
+        // 最初にタップした座標を取り出す
+        guard let touch = touches.first else {return}
 
-    //     let touchPos = touch.location(in: sceneView)
+        let touchPos = touch.location(in: sceneView)
 
-    //     // タップされた位置のARアンカーを探す
-    //     let hitTest = sceneView.hitTest(touchPos, types: .existingPlaneUsingExtent)
-    //     if !hitTest.isEmpty {
-    //         // タップした箇所が取得できていればアンカーを追加
-    //         let anchor = ARAnchor(transform: hitTest.first!.worldTransform)
-    //         sceneView.session.add(anchor: anchor)
-    //     }
+        // タップされた位置のARアンカーを探す
+        let hitTest = sceneView.hitTest(touchPos, types: .existingPlaneUsingExtent)
+        if !hitTest.isEmpty {
+            // タップした箇所が取得できていればアンカーを追加
+            let anchor = ARAnchor(transform: hitTest.first!.worldTransform)
+            sceneView.session.add(anchor: anchor)
+        }
 
-    //     // 球のノードを作成
-    //     let sphereNode = SCNNode()
+        let torusNode = SCNNode(geometry: SCNTorus(ringRadius: CGFloat(self.ringRadius), pipeRadius: 0.05))
+    torusNode.geometry?.firstMaterial?.diffuse.contents = self.sphereColor
 
-    //     // ノードにGeometryとTransformを設定
-    //     sphereNode.geometry = SCNSphere(radius: 0.05)
+        let position = SCNVector3(x: 0, y: 1, z: -0.5) // ノードの位置は、左右：0m 上下：0m　奥に50cm
+        if let camera = sceneView.pointOfView {
+            torusNode.position = camera.convertPosition(position, to: nil) // カメラ位置からの偏差で求めた位置
+        }
 
-    //     let position = SCNVector3(x: 0, y: 0, z: -0.5) // ノードの位置は、左右：0m 上下：0m　奥に50cm
-    //     if let camera = sceneView.pointOfView {
-    //         sphereNode.position = camera.convertPosition(position, to: nil) // カメラ位置からの偏差で求めた位置
-    //     }
-
-    //     var trafficStrength = 0;
-
-    //     // 球の色を設定
-    //     sphereNode.geometry!.materials.first?.diffuse.contents = self.sphereColor”
-
-    //     sceneView.scene.rootNode.addChildNode(sphereNode)
-    // }
+        sceneView.scene.rootNode.addChildNode(torusNode)
+    }
 
     // 平面を検出したときに呼ばれる
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
